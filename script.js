@@ -92,7 +92,7 @@ reset.addEventListener("click", () => {
 });
 
 function reload() {
-    let confirmreset = confirm("Whole Game Will Start Again.Countinue To Reset?")
+    let confirmreset = confirm("You win the game.Countinue?")
     if (confirmreset === true) {
         window.location.reload();
     }
@@ -104,7 +104,7 @@ let previoustarget = null;
 let count = 0;
 let delay = 1200;
 const match = () => {
-    setTimeout(document.body.style.backgroundImage = 'url("celebrate.jpg")',delay)
+    setTimeout(document.body.style.backgroundImage = 'url("celebrate.jpg")',1200)
     setTimeout(reload(),30000)
     // var selected = document.querySelectorAll(".selected")
     // selected.forEach((card) => {
