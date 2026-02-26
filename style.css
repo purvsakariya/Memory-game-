@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 20px 0;
+    margin: -32px 0;
     background: #6589f9;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -33,8 +33,10 @@ header{
 }
 
 .attempts,
-.time {
-    font-size: 2rem;
+.time,
+.matchcount,
+.match2 {
+    font-size: 33px;
     color: antiquewhite;
 }
 
@@ -118,11 +120,7 @@ header{
 .match {
     /* animation: matchPulse 0.8s ease-in-out forwards; */
     cursor: not-allowed;
-}
-
-.match .front {
-    background: rgb(4, 44, 2) url("pngs/celebrate.jpg")
-        no-repeat center center / 70% !important;
+    transform: rotateY(180deg);
 }
 
 /* MATCH ANIMATION */

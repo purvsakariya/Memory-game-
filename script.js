@@ -98,25 +98,36 @@ function reload() {
     }
 }
 
+const resetguesses2 = () => {
+    firstguess = "";
+    secondguess = "";
+    count = 0;
+    var selected = document.querySelectorAll(".selected")
+    selected.forEach((card) => {
+        card.classList.remove("selected")
+        card.classList.add("match")
+    })
+}
+
 let firstguess = "";
 let secondguess = "";
 let previoustarget = null;
 let count = 0;
 let delay = 1200;
+let matchcount = 0;
 const match = () => {
-    setTimeout(document.body.style.backgroundImage = 'url("celebrate.jpg")',1200)
-    setTimeout(reload(),30000)
-    // var selected = document.querySelectorAll(".selected")
-    // selected.forEach((card) => {
-    //     card.classList.add("match")
-    // });
+    matchcount++;
+    let mcount = document.querySelector(".matchcount")
+    mcount.innerHTML = matchcount;
+    console.log(matchcount);
+    resetguesses2();
 };
+
 
 const resetguesses = () => {
     firstguess = "";
     secondguess = "";
     count = 0;
-    console.log("Game reset");
     var selected = document.querySelectorAll(".selected")
     selected.forEach((card) => {
         card.classList.remove("selected")
